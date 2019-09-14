@@ -1,0 +1,23 @@
+// CONTAINERS
+// ==============================
+
+$container-sizes: (
+    'small'    : 768px,
+    'large'    : 1440px,
+) !default;
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.container-content{
+    width: 100%;
+    height: 100%;
+}
+@each $name, $size in $container-sizes {
+    .container-#{$name} {
+        max-width: $size;
+    }
+}

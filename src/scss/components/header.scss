@@ -1,0 +1,92 @@
+// HEADER
+// ==============================
+
+$header-height: 100vh !default;
+$header-title-size: 20px !default;
+$header-subtitle-size: 18px !default;
+$header-disclaimer-size: 12px !default;
+$header-bg-color: $color-amber-500 !default;
+$header-text-color: $color-gray-800 !default;
+
+header,
+.header {
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+    background: #455a64;
+    display: flex;
+    flex-direction: row;
+    padding:5px 10px;
+
+    .title {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        .t1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: $header-title-size Roboto,RobotoDraft,Arial,sans-serif;
+            font-weight: 600;
+            color: #eee;
+            cursor: pointer;   
+            padding: 10px 20px;    
+            &:hover{
+                opacity: 0.75
+            }
+        }
+
+        .t2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: $header-title-size Roboto,RobotoDraft,Arial,sans-serif;
+            font-weight: 600;
+            color: #eee;
+            text-align: left;
+            padding: 10px 20px;
+                a{color: #eee}
+            @include breakpoint-max($bp-small) {
+                display: none;
+            }  
+            
+        }
+        
+    }
+
+    .user{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .u1,.u2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            color: #eee;
+            padding: 10px 20px;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.75
+            }
+        }
+
+    }
+
+    @keyframes bounce {
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+}

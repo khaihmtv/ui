@@ -1,0 +1,129 @@
+// NAVIGATION
+// ==============================
+
+$nav-bg-color: $color-amber-500 !default;
+$nav-link-color: $color-gray-800 !default;
+$nav-link-active-color: $brand-color !default;
+$nav-menu-toggle-color: $color-gray-800 !default;
+
+
+.cont-nav{
+    @include breakpoint-min($bp-small){
+        display: none
+    }
+    @include breakpoint-max($bp-small){
+        position: fixed;
+        right: 0;
+        top:0;
+        height:100%;
+        width: 0;
+        max-width: 100%;
+        background: rgba(0,0,0,0);
+    }
+}
+
+nav,
+.nav{
+    height: 100%;
+    width: 260px;
+    background: #fafafa;
+    z-index: 10;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
+    border-right:1px rgba(0,0,0,0.12) solid;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow-y: auto;
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+
+    .card{
+        min-width: 240px;
+        border-top: 1px rgba(0,0,0,0.12) solid;
+        padding: 8px 0 7px 0;
+        &.logo{
+            background-color: rgba(219, 68, 55,1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
+                a{
+                    background-color: rgba(219, 68, 55,1);
+                    color:#eee;
+                    font: 20px Roboto,RobotoDraft,Arial,sans-serif;
+                    font-weight: 600;
+                }
+            @include breakpoint-min($bp-small) {
+                display: none;
+            }
+            border-top:none; 
+        }
+        .tt{
+            display: flex;
+            span{flex-grow: 1}
+            
+            .tt1{
+                display: flex;
+                align-items: center;
+                padding: 7px 16px;
+                div{
+                    font-size: 15px;
+                    color: rgba(0,0,0,0.54); 
+                    line-height: 20px;
+                    font-weight: 500;
+                }
+                
+            }
+            .tt2{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 7px 16px;
+                i{
+                    font-size: 20px;
+                    color: rgba(0,0,0,0.38); 
+                    line-height: 20px;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+                
+            }
+        }
+        .ct{
+            display: flex;
+            flex-direction: column;
+            .ct1{
+                display: flex;
+                span{
+                    padding: 7px 16px;
+                }
+                i{
+                    font-size: 20px;
+                    color: rgba(0,0,0,0.54); 
+                    line-height: 20px;
+                    font-weight: 500;
+                }
+                a{
+                    font-size: 18px;
+                    color: rgba(0,0,0,0.87); 
+                    line-height: 20px;
+                    font-weight: 500;
+                    
+                }
+                
+            }
+            
+
+        }
+    }
+    
+    @include breakpoint-max($bp-small){
+        position: fixed;
+        left: 0;
+        top:0;
+        width: 0;
+        -webkit-box-shadow: 0 0 16px rgba(0,0,0,.28);
+        box-shadow: 0 0 16px rgba(0,0,0,.28);
+        border-right: none;
+    }
+}
